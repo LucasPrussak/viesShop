@@ -22,8 +22,8 @@ time, mark, audio, video {
 }
 
 :root {
-    --red: #d51217;
-    --hover-red:#bf1015;
+    --red: #df4554;
+    --black: #060508;
 }
 
 
@@ -40,14 +40,13 @@ time, mark, audio, video {
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #888; 
+    background: var(--black);
     border-radius: 1rem;
     
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    transition: 3s;
 
     background: var(--red);
 
@@ -58,10 +57,7 @@ time, mark, audio, video {
     display: grid;
     grid-gap: 2rem;
     grid-template-columns: 1fr 3fr;
-    grid-template-rows: 20rem 20rem 20rem;
-    grid-template-areas: "n m"
-                         "n m"
-                         ". m";
+    grid-template-areas: "n m";
     
     margin: 2rem;
     /* border: solid red 1rem; */
@@ -71,26 +67,40 @@ time, mark, audio, video {
 
 body {
     background-color: rgb(247, 247, 247);
+
+    font-family: 'Raleway', sans-serif;
+    color: #212529;
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+
+    max-width: 1300px;
+
 }
 
 
 main {
     background: white;
     padding: 2rem;
-    /* height: 100px; */
-    /* font-size: 50px; */
-
     grid-area: m;
-    /* grid-column-start: 1;
-    grid-column-end: 2; */
-
     border: solid 0.1rem rgb(222, 222, 222);
+    text-align: center;
+
 }
 
 
 h1 {
-    font-size: 1.8rem;
-    margin: 1rem 1rem 3rem;
+    font-family: "Poppins";
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin: 1rem 0 3rem;
+
+    text-align: left;
+
+    padding-bottom: 0.5rem;
+    border-bottom: solid 0.1rem rgb(222, 222, 222);
+
 }
 
 .form {
@@ -100,6 +110,14 @@ h1 {
     align-content: flex-start;
     gap: 2rem;
 }
+
+input, button {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0;
+}
+
 
 .campo {
     margin: 0;
@@ -121,23 +139,87 @@ h1 {
 .mostrarSenha {
     /* width: 1rem;
     height: 1rem; */
+    margin: 1rem 0 0;
+    text-align: left;
 
-    margin: 1rem 2rem 4rem;
 } 
 
 
 .mostrarSenha > * {
     display: inline-block;
+    font-size: 1rem;
 }
 
+.mostrarSenha > input {
+    width: 1rem;
+    height: 1rem;
+
+    margin:0 0.8rem 0 0;
+}
+
+button  {
+    color: white;
+    font-weight: 700;
+    background-color: #060508;
+
+
+    border: none;
+    border-radius: 7px;
+    height: 50px;
+    width: 30vw;
+    margin: 4rem;
+
+    cursor: pointer;
+
+}
+
+button:hover {
+    background: var(--red);
+    transition: 0.2s;
+}
+
+/* NAV BAR ---------------------------------- */
+
+
 nav {
-    background: green;
-    /* height: 100px; */
-    /* font-size: 50px; */
-    
+    /* width: 90px; Set a specific width */
+    background-color: var(--black); /* Dark-grey background */
     grid-area: n;
-    /* grid-column-start: 2;
-    grid-column-end: 3; */
+    height: fit-content;
+  }
+
+  
+  .icon-bar a {
+      display: block; /* Make the links appear below each other instead of side-by-side */
+      text-align: center; /* Center-align text */
+      padding: 16px; /* Add some padding */
+      transition: all 0.3s ease; /* Add transition for hover effects */
+      color: white; /* White text color */
+      font-size: 1.3rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    
+    i {
+      margin: 0 0.5rem 0 0;
+      font-size: 4rem;
+    }
+
+  .icon-bar a:hover {
+    background-color: var(--red); /* Add a hover color */
+  }
+  
+  .active {
+    background-color: var(--red); /* Add an active/current color */
+  }
+
+  /* CSS USADO APENAS NO "meus-pedidos.html" */
 
 
+th {
+    background-color: var(--red);
+}
+
+th:first-child {
+    border-radius:  30px;
 }
