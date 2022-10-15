@@ -24,6 +24,12 @@ time, mark, audio, video {
 :root {
     --red: #df4554;
     --black: #060508;
+    --grey: #777777;
+    --grey-hover: var(--red);
+    color: #df4554 ;
+    /* atras do background? */
+    color: #1b191f; 
+    color: #060508;
 }
 
 
@@ -92,8 +98,8 @@ main {
 
 h1 {
     font-family: "Poppins";
-    font-weight: 700;
-    font-size: 1.5rem;
+    /* font-weight: 700; */
+    font-size: 2rem;
     margin: 1rem 0 3rem;
 
     text-align: left;
@@ -182,44 +188,79 @@ button:hover {
 
 
 nav {
-    /* width: 90px; Set a specific width */
-    background-color: var(--black); /* Dark-grey background */
-    grid-area: n;
-    height: fit-content;
-  }
+  /* width: 90px; Set a specific width */
+  background-color: var(--grey); /* Dark-grey background */
+  grid-area: n;
+  height: fit-content;
+}
 
-  
-  .icon-bar a {
-      display: block; /* Make the links appear below each other instead of side-by-side */
-      text-align: center; /* Center-align text */
-      padding: 16px; /* Add some padding */
-      transition: all 0.3s ease; /* Add transition for hover effects */
-      color: white; /* White text color */
-      font-size: 1.3rem;
-      font-weight: 700;
-      text-decoration: none;
-    }
+.icon-bar a {
+  display: block; /* Make the links appear below each other instead of side-by-side */
+  text-align: center; /* Center-align text */
+  padding: 16px; /* Add some padding */
+  transition: all 0.3s ease; /* Add transition for hover effects */
+  color: white; /* White text color */
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-decoration: none;
+}
     
-    i {
-      margin: 0 0.5rem 0 0;
-      font-size: 4rem;
-    }
+i {
+  margin: 0 0.5rem 0 0;
+  font-size: 4rem;
+}
 
-  .icon-bar a:hover {
-    background-color: var(--red); /* Add a hover color */
-  }
+.icon-bar a:hover {
+  background-color: var(--grey-hover); /* Add a hover color */
+}
   
-  .active {
-    background-color: var(--red); /* Add an active/current color */
-  }
+.active {
+  background-color: var(--grey-hover); /* Add an active/current color */
+}
 
-  /* CSS USADO APENAS NO "meus-pedidos.html" */
+/* CSS USADO APENAS NO "meus-pedidos.html" */
+
+table {
+  width: 100%;
+  font-size: 1rem;
+}
 
 
 th {
-    background-color: var(--red);
+  background: var(--red);
+  width: 20%;
+  
+  color: white;
+  font-weight: 700;
+  
+  border: white solid 0.2rem;
+  border-collapse: collapse;
+  
+  padding: 0.4rem;
 }
 
 th:first-child {
-    border-radius:  30px;
+  border-radius: 10rem 0 0 10rem;
+  
 }
+
+th:last-child {
+  border-radius: 0 10rem 10rem 0;
+}
+
+td {
+  padding: 0.5rem;
+  font-family: 'Raleway', sans-serif;
+  border-spacing: 3rem 0  ;
+  align-items: center;
+}
+
+td > div {
+  background-color: var(--black);
+  width: 7rem;
+  padding: 0.3rem;
+  border-radius: 10rem;
+
+  color: white;
+  font-weight: 700;
+} 
