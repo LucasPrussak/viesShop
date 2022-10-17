@@ -10,9 +10,4 @@ function check(){
         senhaConfEl.type = "password"
         senhaEl.type = "password"
     }
-  
-
-   
-
-
 }
